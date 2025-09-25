@@ -7,8 +7,8 @@ import 'package:doctor_hunt/features/onBoarding/presentation/view/widget/skip_bu
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class OnboredingScreen extends StatelessWidget {
-  const OnboredingScreen({super.key});
+class TherdOnboredingScreen extends StatelessWidget {
+  const TherdOnboredingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class OnboredingScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.topLeft.add(Alignment(0.5, 0)),
                   child: Image.asset(
-                    'assets/images/Ellipse 154.png',
+                    'assets/images/Ellipse 155 (4).png',
                     width: 270,
                     height: 270,
                   ),
@@ -53,7 +53,7 @@ class OnboredingScreen extends StatelessWidget {
                 SizedBox(height: 40),
                 GestureDetector(
                   onTap: () {
-                    GoRouter.of(context).push(AppRouter.kOnBoardingScreen2);
+                    // GoRouter.of(context).push(AppRouter.kOnBoardingScreen2);
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(left: 30, right: 30),

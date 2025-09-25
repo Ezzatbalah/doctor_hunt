@@ -33,7 +33,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        // fit: StackFit.expand,
         children: [
           Positioned.fill(
             child: Image.asset(

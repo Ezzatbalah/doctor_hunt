@@ -1,14 +1,15 @@
 // ignore: file_names
 import 'package:doctor_hunt/core/utils/app_string.dart';
 import 'package:doctor_hunt/core/utils/routes.dart';
-import 'package:doctor_hunt/core/utils/styles.dart';
-import 'package:doctor_hunt/features/onBoarding/presentation/view/widget/skip_button.dart';
 
+import 'package:doctor_hunt/core/utils/styles.dart';
+
+import 'package:doctor_hunt/features/onBoarding/presentation/view/widget/skip_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class OnboredingScreen extends StatelessWidget {
-  const OnboredingScreen({super.key});
+class SceonedBording extends StatelessWidget {
+  const SceonedBording({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class OnboredingScreen extends StatelessWidget {
           children: [
             Positioned.fill(
               child: Image.asset(
-                'assets/images/02_Onboarding screen-01.jpg',
+                'assets/images/03_Onboarding screen-02.jpg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -31,7 +32,7 @@ class OnboredingScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.topLeft.add(Alignment(0.5, 0)),
                   child: Image.asset(
-                    'assets/images/Ellipse 154.png',
+                    'assets/images/Ellipse 154 (2).png',
                     width: 270,
                     height: 270,
                   ),
@@ -43,9 +44,9 @@ class OnboredingScreen extends StatelessWidget {
                 Center(
                   child: Padding(
                     padding: const EdgeInsets.only(
-                      left: 30,
-                      right: 20,
-                      top: 10,
+                      left: 20,
+                      right: 45,
+                      top: 20,
                     ),
                     child: Text(AppString.textBord2, style: Styles.textStyle14),
                   ),
@@ -53,7 +54,7 @@ class OnboredingScreen extends StatelessWidget {
                 SizedBox(height: 40),
                 GestureDetector(
                   onTap: () {
-                    GoRouter.of(context).push(AppRouter.kOnBoardingScreen2);
+                    GoRouter.of(context).push(AppRouter.kOnBoardingScreen3);
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(left: 30, right: 30),
