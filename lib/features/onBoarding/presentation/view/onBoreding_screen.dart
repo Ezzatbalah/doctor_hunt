@@ -47,7 +47,10 @@ class OnboredingScreen extends StatelessWidget {
                       right: 20,
                       top: 10,
                     ),
-                    child: Text(AppString.textBord2, style: Styles.textStyle14),
+                    child: Text(
+                      AppString.textBordHint,
+                      style: Styles.textStyle14,
+                    ),
                   ),
                 ),
                 SizedBox(height: 40),

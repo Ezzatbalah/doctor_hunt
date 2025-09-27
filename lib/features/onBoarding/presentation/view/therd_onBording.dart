@@ -38,7 +38,7 @@ class TherdOnboredingScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 90),
                 Center(
-                  child: Text(AppString.textBord1, style: Styles.textStyle28),
+                  child: Text(AppString.textBord3, style: Styles.textStyle28),
                 ),
                 Center(
                   child: Padding(
@@ -47,13 +47,16 @@ class TherdOnboredingScreen extends StatelessWidget {
                       right: 20,
                       top: 10,
                     ),
-                    child: Text(AppString.textBord2, style: Styles.textStyle14),
+                    child: Text(
+                      AppString.textBordHint,
+                      style: Styles.textStyle14,
+                    ),
                   ),
                 ),
                 SizedBox(height: 40),
                 GestureDetector(
                   onTap: () {
-                    // GoRouter.of(context).push(AppRouter.kOnBoardingScreen2);
+                    GoRouter.of(context).push(AppRouter.kHomeView);
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(left: 30, right: 30),

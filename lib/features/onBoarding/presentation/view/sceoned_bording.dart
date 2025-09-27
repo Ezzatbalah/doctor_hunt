@@ -39,7 +39,7 @@ class SceonedBording extends StatelessWidget {
                 ),
                 SizedBox(height: 90),
                 Center(
-                  child: Text(AppString.textBord1, style: Styles.textStyle28),
+                  child: Text(AppString.textBord2, style: Styles.textStyle28),
                 ),
                 Center(
                   child: Padding(
@@ -48,7 +48,10 @@ class SceonedBording extends StatelessWidget {
                       right: 45,
                       top: 20,
                     ),
-                    child: Text(AppString.textBord2, style: Styles.textStyle14),
+                    child: Text(
+                      AppString.textBordHint,
+                      style: Styles.textStyle14,
+                    ),
                   ),
                 ),
                 SizedBox(height: 40),
