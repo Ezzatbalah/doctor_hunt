@@ -25,42 +25,42 @@ class SceonedBording extends StatelessWidget {
               ),
             ),
 
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                SizedBox(height: 80),
-                Align(
-                  alignment: Alignment.topLeft.add(Alignment(0.5, 0)),
-                  child: Image.asset(
-                    'assets/images/Ellipse 154 (2).png',
-                    width: 270,
-                    height: 270,
-                  ),
-                ),
-                SizedBox(height: 90),
-                Center(
-                  child: Text(AppString.textBord2, style: Styles.textStyle28),
-                ),
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: 20,
-                      right: 45,
-                      top: 20,
-                    ),
-                    child: Text(
-                      AppString.textBordHint,
-                      style: Styles.textStyle14,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(height: 80),
+                  Align(
+                    alignment: Alignment.topLeft.add(Alignment(0.5, 0)),
+                    child: Image.asset(
+                      'assets/images/Ellipse 154 (2).png',
+                      width: 270,
+                      height: 270,
                     ),
                   ),
-                ),
-                SizedBox(height: 40),
-                GestureDetector(
-                  onTap: () {
-                    GoRouter.of(context).push(AppRouter.kOnBoardingScreen3);
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 30, right: 30),
+                  SizedBox(height: 90),
+                  Center(
+                    child: Text(AppString.textBord2, style: Styles.textStyle28),
+                  ),
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 20,
+                        right: 45,
+                        top: 20,
+                      ),
+                      child: Text(
+                        AppString.textBordHint,
+                        style: Styles.textStyle14,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 30),
+                  GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context).push(AppRouter.kOnBoardingScreen3);
+                    },
                     child: Container(
                       height: screenHight * 0.09,
                       decoration: BoxDecoration(
@@ -76,11 +76,11 @@ class SceonedBording extends StatelessWidget {
                       ),
                     ),
                   ),
-                ),
-                SizedBox(height: 20),
-                CustomSkip(),
-                SizedBox(height: 40),
-              ],
+                  SizedBox(height: 20),
+                  CustomSkip(),
+                  SizedBox(height: 40),
+                ],
+              ),
             ),
           ],
         ),

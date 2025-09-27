@@ -10,7 +10,7 @@ class CustomSkip extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kHomeView);
+        GoRouter.of(context).push(AppRouter.kSingView);
       },
       child: Center(child: Text('Skip', style: Styles.textStyle14)),
     );
