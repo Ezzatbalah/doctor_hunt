@@ -1,22 +1,23 @@
 import 'package:doctor_hunt/core/utils/app_string.dart';
-import 'package:doctor_hunt/core/utils/routes.dart';
+
 import 'package:doctor_hunt/core/utils/styles.dart';
+import 'package:doctor_hunt/features/auth/login/presentation/view/widget/custom_text_filed_login.dart';
+import 'package:doctor_hunt/features/auth/login/presentation/view/widget/forogotTap.dart';
 import 'package:doctor_hunt/features/auth/singup/presentation/view/widget/Box_media.dart';
-import 'package:doctor_hunt/features/auth/singup/presentation/view/widget/custom_text_filed.dart';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class SingViewBody extends StatefulWidget {
-  const SingViewBody({super.key});
+class LoginViewBody extends StatefulWidget {
+  const LoginViewBody({super.key});
 
   @override
-  State<SingViewBody> createState() => _SingViewBodyState();
+  State<LoginViewBody> createState() => _SingViewBodyState();
 }
 
-class _SingViewBodyState extends State<SingViewBody> {
+class _SingViewBodyState extends State<LoginViewBody> {
   final _formKey = GlobalKey<FormState>();
 
-  final _nameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
@@ -36,13 +37,13 @@ class _SingViewBodyState extends State<SingViewBody> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    AppString.singText1,
+                    AppString.loginText1,
                     style: Styles.textStyle25,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 15),
                   Text(
-                    AppString.singText2,
+                    AppString.loginText2,
                     style: Styles.textStyle14,
                     textAlign: TextAlign.center,
                   ),
@@ -51,28 +52,51 @@ class _SingViewBodyState extends State<SingViewBody> {
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 20,
-                      vertical: 30,
+                      vertical: 20,
                     ),
-                    child: CustomTextFiled(
+                    child: CustomTextFiledLogin(
                       formKey: _formKey,
-                      nameController: _nameController,
+
                       emailController: _emailController,
                       passwordController: _passwordController,
                       screenHight: screenHight,
                     ),
                   ),
+
                   GestureDetector(
                     onTap: () {
-                      GoRouter.of(context).push(AppRouter.kLoginView);
+                      showModalBottomSheet(
+                        context: context,
+                        isScrollControlled: true,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(25),
+                          ),
+                        ),
+                        builder: (_) => const ForgotPasswordEmailSheet(),
+                      );
                     },
                     child: Text(
-                      "Have an account? Log in",
+                      "Forgot password",
+                      style: Styles.textStyle14.copyWith(
+                        color: const Color(0xff0EBE7F),
+                      ),
+                    ),
+                  ),
+
+                  SizedBox(height: 90),
+                  GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context).pop();
+                    },
+                    child: Text(
+                      "Don’t have an account? Join us",
                       style: Styles.textStyle14.copyWith(
                         color: Color(0xff0EBE7F),
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 10),
                 ],
               ),
             ),

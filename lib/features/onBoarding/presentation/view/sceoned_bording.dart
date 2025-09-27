@@ -40,21 +40,15 @@ class SceonedBording extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 90),
-                  Center(
-                    child: Text(AppString.textBord2, style: Styles.textStyle28),
+                  Text(
+                    AppString.textBord2,
+                    style: Styles.textStyle28,
+                    textAlign: TextAlign.center,
                   ),
-                  Center(
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        left: 20,
-                        right: 45,
-                        top: 20,
-                      ),
-                      child: Text(
-                        AppString.textBordHint,
-                        style: Styles.textStyle14,
-                      ),
-                    ),
+                  Text(
+                    AppString.textBordHint,
+                    style: Styles.textStyle14,
+                    textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 30),
                   GestureDetector(

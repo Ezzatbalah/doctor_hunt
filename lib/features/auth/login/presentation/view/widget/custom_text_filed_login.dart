@@ -1,22 +1,21 @@
-import 'package:doctor_hunt/features/auth/singup/presentation/view/widget/agree_Box.dart';
-import 'package:doctor_hunt/features/auth/singup/presentation/view/widget/singUp_Box.dart';
+import 'package:doctor_hunt/features/auth/login/presentation/view/widget/Login_Box.dart';
+
 import 'package:flutter/material.dart';
 
-class CustomTextFiled extends StatelessWidget {
-  const CustomTextFiled({
+class CustomTextFiledLogin extends StatelessWidget {
+  const CustomTextFiledLogin({
     super.key,
     required GlobalKey<FormState> formKey,
-    required TextEditingController nameController,
     required TextEditingController emailController,
     required TextEditingController passwordController,
     required this.screenHight,
   }) : _formKey = formKey,
-       _nameController = nameController,
+
        _emailController = emailController,
        _passwordController = passwordController;
 
   final GlobalKey<FormState> _formKey;
-  final TextEditingController _nameController;
+
   final TextEditingController _emailController;
   final TextEditingController _passwordController;
   final double screenHight;
@@ -27,23 +26,6 @@ class CustomTextFiled extends StatelessWidget {
       key: _formKey,
       child: Column(
         children: [
-          TextFormField(
-            controller: _nameController,
-            decoration: InputDecoration(
-              labelText: "Name",
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: BorderSide(color: Colors.grey),
-              ),
-            ),
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return "Name is required";
-              }
-              return null;
-            },
-          ),
-          const SizedBox(height: 20),
           TextFormField(
             controller: _emailController,
             decoration: InputDecoration(
@@ -84,10 +66,9 @@ class CustomTextFiled extends StatelessWidget {
               return null;
             },
           ),
-          const SizedBox(height: 10),
-          AgreeTerms(),
-          SizedBox(height: 40),
-          SingUpBox(screenHight: screenHight, formKey: _formKey),
+          const SizedBox(height: 30),
+
+          LoginBox(screenHight: screenHight, formKey: _formKey),
         ],
       ),
     );

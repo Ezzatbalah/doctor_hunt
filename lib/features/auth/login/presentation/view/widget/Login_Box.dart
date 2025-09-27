@@ -3,12 +3,8 @@ import 'package:doctor_hunt/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class SingUpBox extends StatelessWidget {
-  const SingUpBox({
-    super.key,
-    required this.screenHight,
-    required this.formKey,
-  });
+class LoginBox extends StatelessWidget {
+  const LoginBox({super.key, required this.screenHight, required this.formKey});
 
   final double screenHight;
   final GlobalKey<FormState> formKey;
@@ -31,7 +27,7 @@ class SingUpBox extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
 
-        child: Center(child: Text("Sing Up", style: Styles.textStyle18)),
+        child: Center(child: Text("Login", style: Styles.textStyle18)),
       ),
     );
   }

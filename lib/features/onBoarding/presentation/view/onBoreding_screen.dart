@@ -39,10 +39,16 @@ class OnboredingScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 90),
-                  Center(
-                    child: Text(AppString.textBord1, style: Styles.textStyle28),
+                  Text(
+                    AppString.textBord1,
+                    style: Styles.textStyle28,
+                    textAlign: TextAlign.center,
                   ),
-                  Text(AppString.textBordHint, style: Styles.textStyle14),
+                  Text(
+                    AppString.textBordHint,
+                    style: Styles.textStyle14,
+                    textAlign: TextAlign.center,
+                  ),
                   SizedBox(height: 40),
                   GestureDetector(
                     onTap: () {

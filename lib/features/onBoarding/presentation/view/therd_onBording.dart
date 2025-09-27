@@ -40,20 +40,16 @@ class TherdOnboredingScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 90),
                   Center(
-                    child: Text(AppString.textBord3, style: Styles.textStyle28),
-                  ),
-                  Center(
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        left: 30,
-                        right: 20,
-                        top: 10,
-                      ),
-                      child: Text(
-                        AppString.textBordHint,
-                        style: Styles.textStyle14,
-                      ),
+                    child: Text(
+                      AppString.textBord3,
+                      style: Styles.textStyle28,
+                      textAlign: TextAlign.center,
                     ),
+                  ),
+                  Text(
+                    AppString.textBordHint,
+                    style: Styles.textStyle14,
+                    textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 40),
                   GestureDetector(
