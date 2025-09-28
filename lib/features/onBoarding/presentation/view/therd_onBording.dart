@@ -65,7 +65,7 @@ class TherdOnboredingScreen extends StatelessWidget {
 
                       child: Center(
                         child: Text(
-                          AppString.Button,
+                          AppString.button,
                           style: Styles.textStyle18,
                         ),
                       ),

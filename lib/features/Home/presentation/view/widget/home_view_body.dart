@@ -1,3 +1,8 @@
+import 'package:doctor_hunt/core/utils/app_string.dart';
+import 'package:doctor_hunt/core/utils/colors.dart';
+import 'package:doctor_hunt/core/utils/styles.dart';
+import 'package:doctor_hunt/core/utils/widget/custom_textFild.dart';
+import 'package:doctor_hunt/features/Home/presentation/view/widget/custom_appbar_container.dart';
 import 'package:doctor_hunt/features/Home/presentation/view/widget/custom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:doctor_hunt/features/Home/presentation/view/screens/books_screen.dart';
@@ -37,6 +42,18 @@ class _HomeViewBodyState extends State<HomeViewBody> {
             child: Image.asset("assets/images/sing.png", fit: BoxFit.cover),
           ),
           pages[selectedIndex],
+          Column(
+            children: [
+              CustomAppBarContainer(),
+              Transform.translate(
+                offset: const Offset(0, -25),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: CustomTextField(),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       bottomNavigationBar: CustomBottomNavBar(
